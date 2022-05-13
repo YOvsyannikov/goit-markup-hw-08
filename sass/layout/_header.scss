@@ -1,0 +1,127 @@
+.header {
+    background: var(--white-text-color);
+    border-bottom: 1px solid #ececec;
+}
+
+
+.logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+
+    color: var(--accent-text-color);
+}
+
+.header__logo {
+    margin-right: 93px;
+}
+.logo__span {
+    color: var(--title-text-color);
+}
+
+
+.header__container {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu__item {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    &:nth-child(n+2) {
+            margin-left: 50px;
+        }
+}
+
+
+
+.menu__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--title-text-color);
+    text-decoration: none;
+    transition-duration: 250ms;
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            color: var(--accent-text-color);
+    
+        }
+}
+
+.menu__link--curent {
+    color: var(--accent-text-color);
+
+    &::after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+    
+            content: "";
+            display: block;
+            width: 100%;
+            height: 4px;
+            border-radius: 4px;
+            background-color: var(--accent-text-color);
+        }
+}
+
+.connect {
+    display: flex;
+    margin-left: auto;
+
+    &__item+&__item {
+        margin-left: 50px;
+        }
+
+}
+
+
+.connect__link {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: var(--paragraph-text-color);
+    text-decoration: none;
+    transition-duration: 250ms;
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            color: var(--accent-text-color);
+        }
+}
+
+
+
+.connect__icon {
+    margin-right: 10px;
+    fill: currentColor;
+
+        &:hover,
+        &:focus {
+            fill: var(--accent-text-color);
+        }
+}
+
+
+

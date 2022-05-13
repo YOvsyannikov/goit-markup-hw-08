@@ -1,0 +1,37 @@
+.section--no-pading-top {
+    padding-top: 0;
+}
+
+.service {
+    display: flex;
+    align-items: center;
+}
+
+.service__item {
+    position: relative;
+    &:nth-child(n+2) {
+        margin-left: 30px;
+        }
+}
+
+.service__direction {
+    position: absolute;
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    background: rgba(47, 48, 58, 0.8);
+}

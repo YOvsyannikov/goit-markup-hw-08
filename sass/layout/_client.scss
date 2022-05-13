@@ -1,0 +1,38 @@
+
+
+.client {
+    display: flex;
+}
+
+.client__item {
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    color: #AFB1B8;
+
+    transition-duration: 250ms;
+    transition-property: color, border;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:not(:first-child) {
+            margin-left: 30px;
+        }
+    &:hover,
+    &:focus {
+        color: var(--accent-text-color);
+        border: 1px solid var(--accent-text-color);
+        border-radius: 4px;
+        }
+}
+
+.client__link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    color: currentColor;
+}
+
+.client__icon {
+    fill: currentColor;
+}
