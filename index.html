@@ -13,9 +13,9 @@
 
     <link rel="stylesheet" href="./css/main.min.css" />
 </head>
-<body>
+<body class="body">
    <!-- Header content -->
-    <!-- <header class="header">
+    <header class="header">
         <div class="header__container container">
             <a class="header__logo logo" href="index.html">Web<span class="logo__span">Studio</span></a>
             <nav class="navigation">
@@ -40,8 +40,56 @@
                     </svg>+38 096 111 11 11</a>
                 </li>
             </ul>
+
+            <button type="button" class="mob-menu__open-btn">
+                <svg class="mob-menu__open-icon" width="40" height="40">
+                    <use href="./images/symbol-defs.svg#icon-menu"></use>
+                </svg></button> 
         </div>
-    </header> -->
+<!-- мобильное меню -->
+<div class="mob-menu is-hidden">
+    <div class="mob-container">
+<button type="button" class="mob-menu__close-btn">
+    <svg class="mob-menu__close-icon" width="40" height="40">
+        <use href="./images/symbol-defs.svg#icon-menu-close"></use>
+    </svg> </button>
+<div class="mob-menu-top">
+    <ul class="mob_menu__list list">
+        <li class="mob_menu__item"><a class="mob_menu__link link mob_menu__link--curent" href="./index.html">Студия</a>
+        </li>
+        <li class="mob_menu__item"><a class="mob_menu__link link" href="./portfolio.html">Портфолио</a>
+        </li>
+        <li class="mob_menu__item"><a class="mob_menu__link link" href="">Контакты</a></li>
+    </ul>
+</div>
+<div class="mob-menu-bottom">
+<div class="connection">
+<ul class="mob-connect list">
+    <li class="mob-connect__item">
+        <a class="mob-connect__link link" href="tel:+380961111111">
+            +38 096 111 11 11</a>
+    </li>
+    <li class="mob-connect__item">
+        <a class="mob-connect__link link mob-connect__link--change-style" href="mailto:info@devstudio.com">
+            info@devstudio.com</a>
+    </li>
+</ul>
+</div>
+<ul class="mob-soc list link">
+    <li class="mob-soc__item"><a class="mob-soc__link link" href="https://www.instagram.com/" target="_blank" aria-label="Instagram link">Instagram
+        </a><span class="separator"></span></li>
+    <li class="mob-soc__item"><a class="mob-soc__link link" href="https://twitter.com/" target="_blank" aria-label="Twitter link">Twitter
+        </a><span class="separator"></span></li>
+    <li class="mob-soc__item"><a class="mob-soc__link link" href="https://www.facebook.com/" target="_blank" aria-label="Meta link">Facebook
+        </a><span class="separator"></span></li>
+    <li class="mob-soc__item"><a class="mob-soc__link link" href="https://www.linkedin.com/" target="_blank" aria-label="Linkedin link">LinkedIn
+        </a></li>
+</ul>
+</div>
+</div>
+</div>
+<!-- конец мобильного меню -->
+    </header>
     <!-- End of Header content -->
     <!-- Main content -->
     <main>
@@ -100,7 +148,7 @@
         </section>
     <!-- End of Section 2 -->
     <!-- Section 3 -->
-        <!-- <section class="section section--no-pading-top">
+        <section class="section section--no-pading-top">
             <div class="container">
                 <h2 class="section__title">Чем мы занимаемся</h2>
                 <ul class="service list">
@@ -112,15 +160,38 @@
                 <p class="service__direction">Дизайнерские решения</p></li>
             </ul>
             </div>
-        </section> -->
+        </section>
     <!-- End of Section 3 -->
     <!-- Section 4 -->
-        <!-- <section class="section section--other-background">
+        <section class="section section--other-background"> -->
             <div class="container">
             <h2 class="section__title">Наша команда</h2>
             <ul class="team-cards list">
                 <li class="team-cards__item">
-                    <img src="images/img.jpg" alt="Игорь Демьяненко" width="270" />
+                    <picture>
+                        <source srcset="
+                            ./images/team/team-1-desktop@X1.jpg 1x,
+                            ./images/team/team-1-desktop@X2.jpg 2x
+                            "
+                        media="(min-width:1200px)"
+                        type="images/jpg"
+                        />
+                        <source srcset="
+                            ./images/team/team-1-tablet@X1.jpg 1x,
+                            ./images/team/team-1-tablet@X1.jpg 2x 
+                            " 
+                            media="(min-width:768px)" 
+                            type="images/jpg"
+                        />
+                        <source srcset="
+                            ./images/team/team-1-mob@X1.jpg 1x,
+                            ./images/team/team-1-mob@X1.jpg 2x
+                            " 
+                            media="(min-width:320px)" 
+                            type="images/jpg"
+                        />
+                        <img src="./images/team/img1.jpg" alt="Игорь Демьяненко" />
+                    </picture>
                 <div class="team-cards__box">
                     <h3 class="team-cards__title">Игорь Демьяненко</h3>
                     <p class="team-cards__text">Product Designer</p>
@@ -149,7 +220,22 @@
                 </div>
                 </li>
                 <li class="team-cards__item">
-                    <img src="images/img(1).jpg" alt="Ольга Репина" width="270" />
+                    <picture>
+                        <source srcset="
+                                ./images/team/team-2-desktop@X1.jpg 1x,
+                                ./images/team/team-2-desktop@X2.jpg 2x
+                                " media="(min-width:1200px)" type="images/jpg" />
+                        <source srcset="
+                                ./images/team/team-2-tablet@X1.jpg 1x,
+                                ./images/team/team-2-tablet@X1.jpg 2x 
+                                " media="(min-width:768px)" type="images/jpg" />
+                        <source srcset="
+                                ./images/team/team-2-mob@X1.jpg 1x,
+                                ./images/team/team-2-mob@X1.jpg 2x
+                                " media="(min-width:320px)" type="images/jpg" />
+                        <img src="./images/team/img2.jpg" alt="Игорь Демьяненко" />
+                    </picture>
+                    
                 <div class="team-cards__box">
                     <h3 class="team-cards__title">Ольга Репина</h3>
                     <p class="team-cards__text">Frontend Developer</p>
@@ -178,7 +264,21 @@
                 </div>
                 </li>
                 <li class="team-cards__item">
-                    <img src="images/img(2).jpg" alt="Николай Тарасов" width="270" />
+                    <picture>
+                        <source srcset="
+                                ./images/team/team-3-desktop@X1.jpg 1x,
+                                ./images/team/team-3-desktop@X2.jpg 2x
+                                " media="(min-width:1200px)" type="images/jpg" />
+                        <source srcset="
+                                ./images/team/team-3-tablet@X1.jpg 1x,
+                                ./images/team/team-3-tablet@X1.jpg 2x 
+                                " media="(min-width:768px)" type="images/jpg" />
+                        <source srcset="
+                                ./images/team/team-3-mob@X1.jpg 1x,
+                                ./images/team/team-3-mob@X1.jpg 2x
+                                " media="(min-width:320px)" type="images/jpg" />
+                        <img src="./images/team/img3.jpg" alt="Игорь Демьяненко" />
+                    </picture>
                 <div class="team-cards__box">
                     <h3 class="team-cards__title">Николай Тарасов</h3>
                     <p class="team-cards__text">Marketing</p>
@@ -207,7 +307,21 @@
                 </div>
                 </li>
                 <li class="team-cards__item">
-                    <img src="images/img(3).jpg" alt="Михаил Ермаков" width="270" />
+                    <picture>
+                        <source srcset="
+                                ./images/team/team-4-desktop@X1.jpg 1x,
+                                ./images/team/team-4-desktop@X2.jpg 2x
+                                " media="(min-width:1200px)" type="images/jpg" />
+                        <source srcset="
+                                ./images/team/team-4-tablet@X1.jpg 1x,
+                                ./images/team/team-4-tablet@X1.jpg 2x 
+                                " media="(min-width:768px)" type="images/jpg" />
+                        <source srcset="
+                                ./images/team/team-4-mob@X1.jpg 1x,
+                                ./images/team/team-4-mob@X1.jpg 2x
+                                " media="(min-width:320px)" type="images/jpg" />
+                        <img src="./images/team/img4.jpg" alt="Игорь Демьяненко" />
+                    </picture>
                 <div class="team-cards__box">
                     <h3 class="team-cards__title">Михаил Ермаков</h3>
                     <p class="team-cards__text">UI Designer</p>
@@ -237,10 +351,10 @@
                 </li>
             </ul>
             </div>
-        </section> -->
+        </section>
         <!-- End of Section 4 -->
         <!-- Section 5 -->
-        <!-- <section class="section">
+        <section class="section">
             <div class="container">
                 <h2 class="section__title">Постоянные клиенты</h2>
                 <ul class="client list">
@@ -276,14 +390,15 @@
                     </li>
                 </ul>
             </div>
-        </section> -->
+        </section>
         <!-- End of Section 5 -->
     </main>
     <!-- End of main content -->
     <!-- Footer content -->
-    <!-- <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
+                <div class="footer__tablet">
                 <div class="footer__box">
         <a class="footer__logo logo" href="index.html">Web<span class="logo__span logo--revers">Studio</span> </a>
      <address>
@@ -299,6 +414,7 @@
             </li>
         </ul>
     </address>
+    
     </div>
     <div class="footer__social">
         <h3 class="footer__title">присоединяйтесь</h3>
@@ -329,6 +445,7 @@
     </li>
         </ul>
     </div>
+    </div>
     <div class="subscribe">
         <p class="footer__title">Подпишитесь на рассылку</p>
         <form class="subs-form">
@@ -342,7 +459,7 @@
     </div>
     </div>
     </div>
-    </footer> -->
+    </footer>
     <!-- End of footer -->
     <!-- Modal FORM -->
     <div data-modal class="backdrop is-hidden">
@@ -396,9 +513,14 @@
         </label>
         <button type="submit" class="check-field__btn">Отправить</button>
             </form>
-            <!-- END OF FORM -->
+            
         </div>
     </div>
+    <!-- END OF FORM -->
+
+
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 </html>
+

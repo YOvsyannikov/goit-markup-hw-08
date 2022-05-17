@@ -1,5 +1,10 @@
 .section--no-pading-top {
     padding-top: 0;
+    @media screen and (min-width: 0px) and (max-width: 1199px) {
+            display: none;
+        }
+    
+    
 }
 
 .service {
