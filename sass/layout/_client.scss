@@ -4,8 +4,11 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: calc(-1 * 30px);
-    margin-bottom: calc(-1 *30px);
     
+    @media screen and (max-width: 1199px) {
+        margin-bottom: calc(-1 *30px);
+        }
+
     @media screen and (min-width: 1200px) {
             flex-wrap: nowrap;
         }

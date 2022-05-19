@@ -16,10 +16,13 @@
 }
 
 .header__logo {
-    margin-right: 93px;
-    @media screen and (min-width: 1200px) {
-            margin-left: auto;
-        }
+    @media screen and (min-width: 768px) {
+        margin-right: 93px;
+    }
+    
+    // @media screen and (min-width: 1200px) {
+    //         margin-left: auto;
+    //     }
 }
 .logo__span {
     color: var(--title-text-color);
@@ -98,7 +101,7 @@
     display: block;
 }
 @media screen and (min-width: 1200px) {
-    margin-right: auto;
+    
     display: flex;
     &__item+&__item {
             margin-left: 50px;
@@ -198,10 +201,7 @@
             visibility: hidden;
         }
 
-    @media screen and (min-width: 768px) {
-        
-        
-    }
+    
 }
 .mob-menu__close-btn{
     display: block;
